@@ -7,6 +7,10 @@
 //
 
 #import "BTAppDelegate.h"
+#import "BTLoadBalancer.h"
+#import "BTClientController.h"
+#import "BTEvaluator.h"
+#import "BTAnalyticsViewController.h"
 
 @implementation BTAppDelegate
 
@@ -16,10 +20,47 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    _viewController = [[BTAnalyticsViewController alloc] init];
+    _dataSet = [[NSMutableArray alloc] init];
+//    _loadBalancer = [[BTLoadBalancer alloc] init];
+    _evaluator = [[BTEvaluator alloc] init];
+    _clientController = [[BTClientController alloc] initWithCallback:^(NSData *data) {
+        NSError *error = nil;
+        NSDictionary *datum = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        if (error) {
+            NSLog(@"error %@", error);
+        }
+        if ([datum objectForKey:@"map"]) {
+            self.evaluator.mapFunction = [SNEval evaluate:[datum objectForKey:@"map"] inContext:[[SNEval prelude] mutableCopy]];
+        } else if ([datum objectForKey:@"reduce"]) {
+            self.evaluator.reduceFunction = [SNEval evaluate:[datum objectForKey:@"reduce"] inContext:[[SNEval prelude] mutableCopy]];
+        } else if ([datum objectForKey:@"data"]) {
+            [self.evaluator queue:datum withProgress:^(NSDictionary *progressInformation) {
+                NSNumber *size = progressInformation[@"size"];
+                NSNumber *computed = progressInformation[@"computed"];
+                NSObject *result = progressInformation[@"result"];
+                self.viewController.dataSizeLabel.text = size.description;
+                self.viewController.dataComputedLabel.text = computed.description;
+                self.viewController.dataToComputeLabel.text = [NSNumber numberWithInt:size.integerValue - computed.integerValue].description;
+                self.viewController.resultLabel.text = result.description;
+                self.viewController.progressView.progress = computed.floatValue / size.floatValue;
+            } onComplete:^(NSObject *result) {
+                [self.clientController sendFinalResult:result];
+            }];
+        }
+        NSLog(@"got whole data: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    }];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+//    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AnalyticsView" owner:self options:nil];
+//    [self.window addSubview:[nib firstObject]];
+
+    self.window.rootViewController = _viewController;
+    
     return YES;
 }
 

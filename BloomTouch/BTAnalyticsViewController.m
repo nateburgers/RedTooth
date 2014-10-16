@@ -1,0 +1,56 @@
+//
+//  BTAnalyticsViewController.m
+//  BloomTouch
+//
+//  Created by Nathan Burgers on 4/6/14.
+//  Copyright (c) 2014 Nathan Burgers. All rights reserved.
+//
+
+#import "BTAnalyticsViewController.h"
+
+@interface BTAnalyticsViewController ()
+
+@end
+
+@implementation BTAnalyticsViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [[NSBundle mainBundle] loadNibNamed:@"AnalyticsView" owner:self options:nil];
+        self.view = _viewFromNib;
+        _dataSetLabel.text = @"Unnamed Data Set";
+        _dataSizeLabel.text = @"0";
+        _dataComputedLabel.text = @"0";
+        _dataToComputeLabel.text = @"0";
+        _resultLabel.text = @"0";
+        [_progressView setProgress:0.0];
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

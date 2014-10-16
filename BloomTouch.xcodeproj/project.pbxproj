@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430DB81018F0D4E400200532 /* BTClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430DB80F18F0D4E400200532 /* BTClientController.m */; };
+		434E974C18F0B37B0093C8B8 /* SNExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E974B18F0B37B0093C8B8 /* SNExt.m */; };
+		43545F5C18F165E500D8DC6A /* AnalyticsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43545F5B18F165E500D8DC6A /* AnalyticsView.xib */; };
+		43545F5E18F1686100D8DC6A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43545F5D18F1686100D8DC6A /* Main_iPad.storyboard */; };
+		43545F6118F1764800D8DC6A /* BTAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43545F6018F1764800D8DC6A /* BTAnalyticsViewController.m */; };
+		43807FCC18F0B2EB009E881F /* SNEval.m in Sources */ = {isa = PBXBuildFile; fileRef = 43807FCB18F0B2EB009E881F /* SNEval.m */; };
 		4382E81818F0846C0094AC39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4382E81718F0846C0094AC39 /* Foundation.framework */; };
 		4382E81A18F0846C0094AC39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4382E81918F0846C0094AC39 /* CoreGraphics.framework */; };
 		4382E81C18F0846C0094AC39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4382E81B18F0846C0094AC39 /* UIKit.framework */; };
@@ -22,6 +28,9 @@
 		4382E83918F0846C0094AC39 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4382E81D18F0846C0094AC39 /* CoreData.framework */; };
 		4382E84118F0846C0094AC39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4382E83F18F0846C0094AC39 /* InfoPlist.strings */; };
 		4382E84318F0846C0094AC39 /* BloomTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4382E84218F0846C0094AC39 /* BloomTouchTests.m */; };
+		4382E85118F08B1C0094AC39 /* BTLoadBalancer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4382E85018F08B1C0094AC39 /* BTLoadBalancer.m */; };
+		4382E85418F09E4C0094AC39 /* BTBloombergClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4382E85318F09E4C0094AC39 /* BTBloombergClient.m */; };
+		43896D9C18F138B6005006CB /* BTEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 43896D9B18F138B6005006CB /* BTEvaluator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		430DB80E18F0D4E400200532 /* BTClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTClientController.h; sourceTree = "<group>"; };
+		430DB80F18F0D4E400200532 /* BTClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTClientController.m; sourceTree = "<group>"; };
+		430DB81118F0DF3700200532 /* service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = service.h; sourceTree = "<group>"; };
+		434E974A18F0B37B0093C8B8 /* SNExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNExt.h; sourceTree = "<group>"; };
+		434E974B18F0B37B0093C8B8 /* SNExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNExt.m; sourceTree = "<group>"; };
+		43545F5B18F165E500D8DC6A /* AnalyticsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnalyticsView.xib; path = ../AnalyticsView.xib; sourceTree = "<group>"; };
+		43545F5D18F1686100D8DC6A /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		43545F5F18F1764800D8DC6A /* BTAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAnalyticsViewController.h; sourceTree = "<group>"; };
+		43545F6018F1764800D8DC6A /* BTAnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAnalyticsViewController.m; sourceTree = "<group>"; };
+		43807FCA18F0B2EB009E881F /* SNEval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNEval.h; sourceTree = "<group>"; };
+		43807FCB18F0B2EB009E881F /* SNEval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNEval.m; sourceTree = "<group>"; };
 		4382E81418F0846C0094AC39 /* BloomTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloomTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4382E81718F0846C0094AC39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4382E81918F0846C0094AC39 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +73,12 @@
 		4382E83E18F0846C0094AC39 /* BloomTouchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BloomTouchTests-Info.plist"; sourceTree = "<group>"; };
 		4382E84018F0846C0094AC39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4382E84218F0846C0094AC39 /* BloomTouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BloomTouchTests.m; sourceTree = "<group>"; };
+		4382E84F18F08B1C0094AC39 /* BTLoadBalancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTLoadBalancer.h; path = ../BTLoadBalancer.h; sourceTree = "<group>"; };
+		4382E85018F08B1C0094AC39 /* BTLoadBalancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTLoadBalancer.m; path = ../BTLoadBalancer.m; sourceTree = "<group>"; };
+		4382E85218F09E4C0094AC39 /* BTBloombergClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBloombergClient.h; sourceTree = "<group>"; };
+		4382E85318F09E4C0094AC39 /* BTBloombergClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBloombergClient.m; sourceTree = "<group>"; };
+		43896D9A18F138B6005006CB /* BTEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTEvaluator.h; sourceTree = "<group>"; };
+		43896D9B18F138B6005006CB /* BTEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTEvaluator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +141,28 @@
 		4382E81F18F0846C0094AC39 /* BloomTouch */ = {
 			isa = PBXGroup;
 			children = (
+				43545F5B18F165E500D8DC6A /* AnalyticsView.xib */,
+				43545F5F18F1764800D8DC6A /* BTAnalyticsViewController.h */,
+				43545F6018F1764800D8DC6A /* BTAnalyticsViewController.m */,
+				4382E84F18F08B1C0094AC39 /* BTLoadBalancer.h */,
+				4382E85018F08B1C0094AC39 /* BTLoadBalancer.m */,
+				430DB80E18F0D4E400200532 /* BTClientController.h */,
+				430DB80F18F0D4E400200532 /* BTClientController.m */,
+				430DB81118F0DF3700200532 /* service.h */,
+				43807FCA18F0B2EB009E881F /* SNEval.h */,
+				43807FCB18F0B2EB009E881F /* SNEval.m */,
+				434E974A18F0B37B0093C8B8 /* SNExt.h */,
+				434E974B18F0B37B0093C8B8 /* SNExt.m */,
 				4382E82818F0846C0094AC39 /* BTAppDelegate.h */,
+				43896D9A18F138B6005006CB /* BTEvaluator.h */,
+				43896D9B18F138B6005006CB /* BTEvaluator.m */,
 				4382E82918F0846C0094AC39 /* BTAppDelegate.m */,
 				4382E82E18F0846C0094AC39 /* Images.xcassets */,
 				4382E82B18F0846C0094AC39 /* BloomTouch.xcdatamodeld */,
 				4382E82018F0846C0094AC39 /* Supporting Files */,
+				4382E85218F09E4C0094AC39 /* BTBloombergClient.h */,
+				4382E85318F09E4C0094AC39 /* BTBloombergClient.m */,
+				43545F5D18F1686100D8DC6A /* Main_iPad.storyboard */,
 			);
 			path = BloomTouch;
 			sourceTree = "<group>";
@@ -230,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4382E82418F0846C0094AC39 /* InfoPlist.strings in Resources */,
+				43545F5E18F1686100D8DC6A /* Main_iPad.storyboard in Resources */,
 				4382E82F18F0846C0094AC39 /* Images.xcassets in Resources */,
+				43545F5C18F165E500D8DC6A /* AnalyticsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +294,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430DB81018F0D4E400200532 /* BTClientController.m in Sources */,
+				43807FCC18F0B2EB009E881F /* SNEval.m in Sources */,
 				4382E82D18F0846C0094AC39 /* BloomTouch.xcdatamodeld in Sources */,
+				43896D9C18F138B6005006CB /* BTEvaluator.m in Sources */,
+				4382E85118F08B1C0094AC39 /* BTLoadBalancer.m in Sources */,
 				4382E82A18F0846C0094AC39 /* BTAppDelegate.m in Sources */,
+				4382E85418F09E4C0094AC39 /* BTBloombergClient.m in Sources */,
+				434E974C18F0B37B0093C8B8 /* SNExt.m in Sources */,
 				4382E82618F0846C0094AC39 /* main.m in Sources */,
+				43545F6118F1764800D8DC6A /* BTAnalyticsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +425,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BloomTouch/BloomTouch-Prefix.pch";
 				INFOPLIST_FILE = "BloomTouch/BloomTouch-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/blpapi_cpp_3.7.5.1",
+					2/Darwin,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,6 +443,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BloomTouch/BloomTouch-Prefix.pch";
 				INFOPLIST_FILE = "BloomTouch/BloomTouch-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/blpapi_cpp_3.7.5.1",
+					2/Darwin,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -450,6 +512,7 @@
 				4382E84818F0846C0094AC39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4382E84918F0846C0094AC39 /* Build configuration list for PBXNativeTarget "BloomTouchTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +521,7 @@
 				4382E84B18F0846C0094AC39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
